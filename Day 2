@@ -1,0 +1,8 @@
+Day 2
+Santa wants to analyze which toys that were produced in his workshop have already been delivered to children. You are given two tables on toy production and toy delivery — can you return the toy ID and toy name of the toys that have been delivered?
+
+
+SELECT DISTINCT p.toy_id, toy_name
+FROM toy_production p
+JOIN toy_delivery d ON p.toy_id = d.toy_id
+;
