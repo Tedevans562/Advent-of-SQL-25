@@ -7,3 +7,15 @@ SELECT name, rank
 FROM reindeer_run_results
 WHERE rank <= 7
 ;
+
+
+ANSWER
+
+name	rank	
+Dasher	1
+Dancer	2
+Prancer	3
+Vixen	4
+Comet	5
+Cupid	6
+Donner	7
