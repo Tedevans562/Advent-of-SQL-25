@@ -17,3 +17,16 @@ FROM (
     FROM grinch_prank_ideas
 )
 WHERE rn = 1;
+
+
+ANSWER
+
+target_name	prank_description	
+Bakery	Replace sugar with salt in all recipes
+Church Choir	Train Max to howl during performances
+Cindy-Lou	Tell her Santa isn't real
+Mayor	Swap his speech with a recipe for roast beast
+Post Office	Mix up all the address labels
+School	Change all clocks to show wrong time
+Town Square	Replace the Christmas tree with a cactus
+Toy Factory	Reverse all the assembly line directions
