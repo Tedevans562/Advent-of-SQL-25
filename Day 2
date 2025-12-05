@@ -6,3 +6,16 @@ SELECT DISTINCT p.toy_id, toy_name
 FROM toy_production p
 JOIN toy_delivery d ON p.toy_id = d.toy_id
 ;
+
+
+ANSWER
+
+
+toy_id	toy_name	
+1	Robot Dog
+3	Building Blocks
+5	Race Car
+7	Train Set
+8	Action Figure
+10	Stuffed Elephant
+12	Art Set
