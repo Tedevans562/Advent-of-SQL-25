@@ -7,3 +7,33 @@ SELECT
     COALESCE(return_date, 'Still resting') AS return_date
 FROM elves e
 LEFT JOIN vacations v ON e.elf_id = v.elf_id;
+
+
+ANSWER
+
+elf_name	return_date	
+Jinglebell	2025-01-05
+Sparkle	2025-01-08
+Tinsel	Still resting
+Snowflake	Still resting
+Mistletoe	2025-01-03
+Gingerbread	Still resting
+Peppermint	2025-01-10
+Frosty	Still resting
+Cocoa	Still resting
+Cinnamon	2025-01-02
+Holly	Still resting
+Evergreen	2025-01-06
+Starlight	Still resting
+Sugarplum	2025-01-04
+Nutmeg	Still resting
+Twinkle	Still resting
+Ginger	2025-01-07
+Candy	Still resting
+Merry	Still resting
+Jolly	2025-01-09
+Blitzen	Still resting
+Chestnut	Still resting
+Cookie	2025-01-05
+Clove	Still resting
+Ribbon	Still resting
