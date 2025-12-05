@@ -8,3 +8,12 @@ ORDER BY energy_cost_per_hour ASC
 LIMIT 5
 ;
 
+ANSWER
+
+
+decoration_name	energy_cost_per_hour	
+LED Window Candles	0.004
+Solar Powered Lanterns	0.005
+LED Star Topper	0.006
+LED Snowflakes	0.007
+Battery Candles	0.008
