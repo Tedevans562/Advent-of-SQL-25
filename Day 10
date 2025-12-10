@@ -1,0 +1,18 @@
+Day 10
+In the holiday cookie factory, workers are measuring how efficient each oven is. Can you find the average baking time per oven rounded to one decimal place?
+
+
+SELECT oven_id, ROUND(AVG(baking_time_minutes), 1) as AVG_baking_time_per_oven
+FROM cookie_batches
+GROUP BY oven_id
+
+ANSWER
+
+
+
+oven_id	AVG_baking_time_per_oven	
+1	12.7
+2	15.4
+3	11
+4	13.8
+5	12.2
