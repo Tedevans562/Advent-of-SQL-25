@@ -1,0 +1,114 @@
+Day 9
+The elves are testing new tinsel–light combinations to find the next big holiday trend. Write a query to generate every possible pairing of tinsel colors and light colors, include in your output a column that combines the two values separated with a dash ("-").
+
+
+SELECT
+  CONCAT (t.color_name, '-', l.color_name) as "Tinsel_colour-light_colour"
+FROM tinsel_colors t
+CROSS JOIN  light_colors l
+
+
+
+ANSWER
+
+insel_colour-light_colour	
+Silver-Warm White
+Silver-Cool White
+Silver-Red
+Silver-Green
+Silver-Blue
+Silver-Yellow
+Silver-Orange
+Silver-Purple
+Silver-Pink
+Silver-Multicolor
+Gold-Warm White
+Gold-Cool White
+Gold-Red
+Gold-Green
+Gold-Blue
+Gold-Yellow
+Gold-Orange
+Gold-Purple
+Gold-Pink
+Gold-Multicolor
+Red-Warm White
+Red-Cool White
+Red-Red
+Red-Green
+Red-Blue
+Red-Yellow
+Red-Orange
+Red-Purple
+Red-Pink
+Red-Multicolor
+Blue-Warm White
+Blue-Cool White
+Blue-Red
+Blue-Green
+Blue-Blue
+Blue-Yellow
+Blue-Orange
+Blue-Purple
+Blue-Pink
+Blue-Multicolor
+Green-Warm White
+Green-Cool White
+Green-Red
+Green-Green
+Green-Blue
+Green-Yellow
+Green-Orange
+Green-Purple
+Green-Pink
+Green-Multicolor
+Pink-Warm White
+Pink-Cool White
+Pink-Red
+Pink-Green
+Pink-Blue
+Pink-Yellow
+Pink-Orange
+Pink-Purple
+Pink-Pink
+Pink-Multicolor
+Purple-Warm White
+Purple-Cool White
+Purple-Red
+Purple-Green
+Purple-Blue
+Purple-Yellow
+Purple-Orange
+Purple-Purple
+Purple-Pink
+Purple-Multicolor
+Copper-Warm White
+Copper-Cool White
+Copper-Red
+Copper-Green
+Copper-Blue
+Copper-Yellow
+Copper-Orange
+Copper-Purple
+Copper-Pink
+Copper-Multicolor
+White-Warm White
+White-Cool White
+White-Red
+White-Green
+White-Blue
+White-Yellow
+White-Orange
+White-Purple
+White-Pink
+White-Multicolor
+Rainbow-Warm White
+Rainbow-Cool White
+Rainbow-Red
+Rainbow-Green
+Rainbow-Blue
+Rainbow-Yellow
+Rainbow-Orange
+Rainbow-Purple
+Rainbow-Pink
+Rainbow-Multicolor
