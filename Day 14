@@ -1,0 +1,41 @@
+Day 14
+The Productivity Club is tracking members' challenge start dates and wants to calculate each member's focus_end_date, exactly 14 days after their start date. Can you write a query to return the existing table with the focus_end_date column?
+
+
+SELECT member_id, member_name, start_date, DATE(start_date, '+14 days') AS focus_end_date
+FROM focus_challenges
+
+
+ANSWER
+
+member_id	   member_name	     start_date	   focus_end_date	
+1	           Sarah Chen	       2024-01-05	    2024-01-19
+2	Marcus Johnson	2024-01-08	2024-01-22
+3	Emily Rodriguez	2024-01-10	2024-01-24
+4	David Kim	2024-01-12	2024-01-26
+5	Jessica Williams	2024-01-15	2024-01-29
+6	Ahmed Hassan	2024-01-18	2024-02-01
+7	Olivia Brown	2024-01-20	2024-02-03
+8	James Taylor	2024-01-22	2024-02-05
+9	Priya Patel	2024-01-25	2024-02-08
+10	Michael Anderson	2024-01-28	2024-02-11
+11	Sophia Martinez	2024-02-01	2024-02-15
+12	Daniel Lee	2024-02-03	2024-02-17
+13	Isabella Garcia	2024-02-05	2024-02-19
+14	Ryan O'Connor	2024-02-08	2024-02-22
+15	Maya Thompson	2024-02-10	2024-02-24
+16	Kevin Zhang	2024-02-12	2024-02-26
+17	Ava Wilson	2024-02-15	2024-02-29
+18	Christopher Moore	2024-02-18	2024-03-03
+19	Zoe Robinson	2024-02-20	2024-03-05
+20	Nathan Clark	2024-02-22	2024-03-07
+21	Emma Lewis	2024-02-25	2024-03-10
+22	Brandon Walker	2024-02-28	2024-03-13
+23	Lily Hall	2024-03-01	2024-03-15
+24	Joshua Young	2024-03-03	2024-03-17
+25	Grace King	2024-03-05	2024-03-19
+26	Tyler Wright	2024-03-08	2024-03-22
+27	Chloe Scott	2024-03-10	2024-03-24
+28	Andrew Green	2024-03-12	2024-03-26
+29	Hannah Adams	2024-03-15	2024-03-29
+30	Justin Baker	2024-03-18	2024-04-01
