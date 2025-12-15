@@ -1,0 +1,48 @@
+Day 15
+The Grinch is tracking his daily mischief scores to see how his behavior changes over time. Can you find how many points his score increased or decreased each day compared to the previous day?
+
+
+SELECT
+    log_date,
+    mischief_score,
+    LAG(mischief_score) OVER (ORDER BY log_date) AS previous_days_score,
+    mischief_score - LAG(mischief_score) OVER (ORDER BY log_date) AS difference_in_score
+FROM grinch_mischief_log
+ORDER BY log_date;
+
+
+ANSWER
+
+
+
+log_date	mischief_score	previous_days_score	difference_in_score	
+2024-12-01	45		
+2024-12-02	52	45	7
+2024-12-03	48	52	-4
+2024-12-04	61	48	13
+2024-12-05	59	61	-2
+2024-12-06	73	59	14
+2024-12-07	68	73	-5
+2024-12-08	75	68	7
+2024-12-09	82	75	7
+2024-12-10	79	82	-3
+2024-12-11	88	79	9
+2024-12-12	91	88	3
+2024-12-13	85	91	-6
+2024-12-14	94	85	9
+2024-12-15	98	94	4
+2024-12-16	102	98	4
+2024-12-17	97	102	-5
+2024-12-18	105	97	8
+2024-12-19	112	105	7
+2024-12-20	108	112	-4
+2024-12-21	118	108	10
+2024-12-22	125	118	7
+2024-12-23	131	125	6
+2024-12-24	145	131	14
+2024-12-25	15	145	-130
+2024-12-26	22	15	7
+2024-12-27	28	22	6
+2024-12-28	35	28	7
+2024-12-29	41	35	6
+2024-12-30	38	41	-3
