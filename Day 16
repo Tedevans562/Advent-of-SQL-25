@@ -1,0 +1,34 @@
+Day 16
+It's a snow day, and Buddy is deciding which tasks he can do from under a blanket. Can you find all tasks that are either marked as 'Work From Home' or 'Low Priority' so he can stay cozy and productive?
+
+
+SELECT *
+FROM daily_tasks
+WHERE task_type = 'Work From Home' OR priority = 'Low'
+;
+
+
+
+ANSWER
+
+task_id	    task_name	    task_type	    priority	
+2	Answer emails	Work From Home	Medium
+4	Update project documentation	Work From Home	Low
+5	Code review	Work From Home	High
+6	File expense reports	Office	Low
+7	Organize desk	Office	Low
+9	Write blog post	Work From Home	Medium
+10	Schedule appointments	Work From Home	Low
+12	Research competitor products	Work From Home	Low
+13	Update spreadsheets	Work From Home	Medium
+14	Water office plants	Office	Low
+15	Backup files	Work From Home	Low
+17	Read industry news	Work From Home	Low
+19	Test new software	Work From Home	Medium
+20	Order supplies	Office	Low
+21	Join webinar	Work From Home	Low
+23	Update calendar	Work From Home	Low
+25	Clean email inbox	Work From Home	Low
+27	Watch training videos	Work From Home	Low
+28	Proofread documents	Work From Home	Medium
+30	Browse project ideas	Work From Home	Low
