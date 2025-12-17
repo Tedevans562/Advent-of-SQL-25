@@ -1,0 +1,44 @@
+Day 17
+During a quiet evening of reflection, Cindy Lou wants to categorize her tasks based on how peaceful they are. Can you write a query that adds a new column classifying each task as 'Calm' if its noise_level is below 50, and 'Chaotic' otherwise?
+
+SELECT *, CASE WHEN noise_level < '50' THEN "Calm" ELSE 'Chaotic' END AS task_peacefulness
+FROM evening_tasks
+
+
+
+
+ANSWER
+
+
+
+task_id	  task_name	noise_level	task_peacefulness	
+1	 Reading a book	    15	             Calm
+2	Watching TV	65	Chaotic
+3	Meditation	5	Calm
+4	Vacuuming	85	Chaotic
+5	Writing in journal	20	Calm
+6	Listening to music	55	Chaotic
+7	Doing yoga	10	Calm
+8	Playing video games	70	Chaotic
+9	Knitting	25	Calm
+10	Using blender	90	Chaotic
+11	Painting	30	Calm
+12	Having friends over	75	Chaotic
+13	Stretching	12	Calm
+14	Playing guitar	60	Chaotic
+15	Brewing tea	35	Calm
+16	Running dishwasher	68	Chaotic
+17	Folding laundry	18	Calm
+18	Dancing	72	Chaotic
+19	Watering plants	22	Calm
+20	Using hair dryer	82	Chaotic
+21	Organizing closet	40	Calm
+22	Playing drums	95	Chaotic
+23	Reading emails	8	Calm
+24	Washing dishes	58	Chaotic
+25	Lighting candles	3	Calm
+26	Running washing machine	78	Chaotic
+27	Sketching	28	Calm
+28	Video calling	52	Chaotic
+29	Feeding pets	45	Calm
+30	Rearranging furniture	88	Chaotic
