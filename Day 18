@@ -1,0 +1,45 @@
+
+Day 18
+Over the 12 days of her data challenge, Data Dawn tracked her daily quiz scores across different subjects. Can you find each subject's first and last recorded score to see how much she improved?
+
+WITH first_dates AS 
+
+(
+    SELECT
+        subject,
+        MIN(DATE(quiz_date)) AS first_date
+    FROM daily_quiz_scores
+    GROUP BY subject
+)
+
+,
+
+
+last_dates AS 
+
+(
+    SELECT
+        subject,
+        MAX(DATE(quiz_date)) AS last_date
+    FROM daily_quiz_scores
+    GROUP BY subject
+)
+
+SELECT
+    f.subject, d1.score AS first_score, d2.score AS last_score, (d2.score - d1.score) AS improvement_in_score
+FROM first_dates f
+  
+JOIN daily_quiz_scores d1 ON d1.subject = f.subject AND DATE(d1.quiz_date) = f.first_date
+  JOIN last_dates l ON l.subject = f.subject
+JOIN daily_quiz_scores d2 ON d2.subject = l.subject AND DATE(d2.quiz_date) = l.last_date
+;
+
+
+
+ANSWER
+
+
+subject	first_score	last_score	improvement_in_score	
+Python	     70	            96	                  26
+SQL	         65	            93	                  28
+Statistics   60	            75	                  15
