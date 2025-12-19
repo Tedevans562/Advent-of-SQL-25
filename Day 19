@@ -1,0 +1,11 @@
+Day 19
+Clara is reviewing holiday orders to uncover hidden patterns — can you return the total amount of wrapping paper used for orders that were both gift-wrapped and successfully delivered?
+
+SELECT SUM(paper_used_meters) as amount_of_wrapping_paper_used_metres
+FROM holiday_orders
+WHERE gift_wrap = 1 AND delivery_status = "Delivered";
+
+ANSWER
+
+amount_of_wrapping_paper_used_metres	
+43.9
