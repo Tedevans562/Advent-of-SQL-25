@@ -1,0 +1,33 @@
+Day 22
+The penguins are signing up for a community sleigh ride, but the organizers need a list of everyone who did NOT choose the "Evening Ride." How would you return all penguins whose selected time is not the evening slot?
+
+
+SELECT *
+FROM sleigh_ride_signups
+WHERE ride_time != 'Evening'
+
+
+ANSWER
+
+signup_id	penguin_name	ride_time	
+1	Waddles	Morning
+3	Pebbles	Afternoon
+4	Frost	Morning
+6	Flipper	Afternoon
+7	Icicle	Morning
+9	Glacier	Afternoon
+10	Powder	Morning
+12	Chilly	Afternoon
+13	Arctic	Morning
+14	Frosty	Afternoon
+16	Nugget	Morning
+17	Shiver	Afternoon
+19	Bumpy	Morning
+20	Marble	Afternoon
+22	Pip	Morning
+23	Snowy	Afternoon
+24	Comet	Morning
+26	Dash	Afternoon
+27	Mittens	Morning
+28	Buttons	Afternoon
+30	Puddle	Morning
