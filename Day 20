@@ -1,0 +1,45 @@
+Day 20
+Jack Frost wants to review all the cocoa breaks he actually took — including the cocoa type and the location he drank it in. How would you combine the necessary tables to show each logged break with its matching cocoa details and location?
+
+
+SELECT cl.break_id as logged_break, ct.cocoa_name as cocoa_details, lt.location_name as location
+FROM cocoa_logs cl
+  JOIN cocoa_types ct ON cl.cocoa_id = ct.cocoa_id
+  JOIN break_schedule bs ON cl.break_id = bs.break_id
+  JOIN locations lt ON bs.location_id = lt.location_id
+
+
+ANSWER
+
+
+logged_break	cocoa_details	location	
+101	Classic Hot Chocolate	Fireplace Lounge
+102	Dark Chocolate Delight	Snow Globe Cafe
+103	Peppermint Mocha	Icicle Bar
+104	Classic Hot Chocolate	Fireplace Lounge
+105	White Chocolate Dream	Cozy Corner Nook
+106	Peppermint Mocha	Snow Globe Cafe
+107	Salted Caramel Cocoa	Winter Wonderland Terrace
+108	Dark Chocolate Delight	Icicle Bar
+109	Classic Hot Chocolate	Fireplace Lounge
+110	White Chocolate Dream	Cozy Corner Nook
+111	Peppermint Mocha	Snow Globe Cafe
+112	Salted Caramel Cocoa	Winter Wonderland Terrace
+113	Classic Hot Chocolate	Icicle Bar
+114	Dark Chocolate Delight	Fireplace Lounge
+115	White Chocolate Dream	Cozy Corner Nook
+101	Peppermint Mocha	Fireplace Lounge
+102	Classic Hot Chocolate	Snow Globe Cafe
+103	Salted Caramel Cocoa	Icicle Bar
+104	Dark Chocolate Delight	Fireplace Lounge
+105	Peppermint Mocha	Cozy Corner Nook
+106	Classic Hot Chocolate	Snow Globe Cafe
+107	White Chocolate Dream	Winter Wonderland Terrace
+108	Peppermint Mocha	Icicle Bar
+109	Salted Caramel Cocoa	Fireplace Lounge
+110	Classic Hot Chocolate	Cozy Corner Nook
+111	Dark Chocolate Delight	Snow Globe Cafe
+112	White Chocolate Dream	Winter Wonderland Terrace
+113	Peppermint Mocha	Icicle Bar
+114	Salted Caramel Cocoa	Fireplace Lounge
+115	Classic Hot Chocolate	Cozy Corner Nook
