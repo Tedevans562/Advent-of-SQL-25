@@ -1,0 +1,37 @@
+Day 21
+
+The Snow Queen hosts nightly fireside chats and records how many stories she tells each evening. Can you calculate the running total of stories she has shared over time, in the order they were told?
+
+
+SELECT log_date, stories_shared, SUM(stories_shared) OVER (ORDER BY log_date) as total_stories_told
+FROM story_log
+ORDER BY log_date ASC
+
+
+ANSWER
+
+log_date	stories_shared	total_stories_told	
+2025-12-01		3	3
+2025-12-02		5	8
+2025-12-03		2	10
+2025-12-04		4	14
+2025-12-05		6	20
+2025-12-06		3	23
+2025-12-07		7	30
+2025-12-08		2	32
+2025-12-09		5	37
+2025-12-10		4	41
+2025-12-11		3	44
+2025-12-12		6	50
+2025-12-13		8	58
+2025-12-14		2	60
+2025-12-15		5	65
+2025-12-16		4	69
+2025-12-17		7	76
+2025-12-18		3	79
+2025-12-19		6	85
+2025-12-20		5	90
+2025-12-21		9	99
+2025-12-22		4	103
+2025-12-23		7	110
+2025-12-24		10	120
