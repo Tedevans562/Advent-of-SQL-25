@@ -1,0 +1,18 @@
+Day 23
+The Gingerbread House Competition wants to feature the builders who used at least 4 distinct candy types in their designs. How would you identify these builders?
+
+SELECT builder_name, COUNT(DISTINCT candy_type) AS no_candy_types_in_design
+FROM gingerbread_designs
+GROUP BY builder_name
+HAVING COUNT(DISTINCT candy_type) >= 4
+
+
+ANSWER
+
+
+builder_name	no_candy_types_in_design	
+Clara Claus	7
+Frosty Johnson	5
+Holly Winters	4
+Jack Frost	6
+Snow Anderson	4
