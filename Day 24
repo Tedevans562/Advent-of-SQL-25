@@ -1,0 +1,19 @@
+Day 24
+
+As the New Year begins, the goals tracker team wants to understand how user types differ. How many completed goals does the average user have in each user_type?
+
+
+SELECT
+    user_type,
+    COUNT(CASE WHEN goal_status = 'Completed' THEN 1 END) / COUNT(DISTINCT user_id) AS avg_completed_goals_per_user_type
+FROM user_goals
+GROUP BY user_type;
+
+
+ANSWER
+
+
+user_type	  avg_completed_goals_per_user_type	
+Free	                    2
+Pro	                      3
+Team	                    4
